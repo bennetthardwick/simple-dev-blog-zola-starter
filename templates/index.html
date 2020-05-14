@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block styles%}
+  <link rel="stylesheet" href="{{ get_url(path="index.css") | safe }}">
+{% endblock styles %}
+
+{% block posthead %}
+  <link rel="prefetch" href="{{ resize_image(path="profile.jpg", width=280, height=373, op="fill") }}">
+{% endblock posthead %}
+
+{% block content %}
+  <div class="profile">
+    <div class="profile-container">
+      <img src="{{ resize_image(path="profile.jpg", width=280, height=373, op="fill") }}" alt="profile picture">
+    </div>
+  </div>
+  <div class="content">
+    {{ section.content | safe }}
+    <nav class="lower">
+      <a href="/projects/">Projects</a>
+      <a href="/about/">About</a>
+      <a href="/blog/">Blog</a>
+    </nav>
+  </div>
+{% endblock content %}

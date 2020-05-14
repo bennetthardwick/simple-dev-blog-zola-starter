@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+
+    {% block description %}
+    <meta name="description" content="{{ config.description }}" />
+    {% endblock description %}
+
+
+    <link rel="prerender" href="/projects/" />
+    <link rel="prerender" href="/about/" />
+    <link rel="prerender" href="/blog/" />
+
+    <link rel="prefetch" href="{{ resize_image(path="profile-square.jpg", width=50, height=50, op="fill") }}" />
+
+    <title>{% block title %}{{ config.title }}{% endblock title %}</title>
+    {% block head %}{% endblock head %}
+    {% block styles %}
+      <link rel="stylesheet" href="{{ get_url(path="main.css") | safe }}">
+    {% endblock styles %}
+    {% block posthead %}{% endblock posthead %}
+  </head>
+  <body>
+    {% block header %}
+      <header>
+        <a class="profile-icon" href="/">
+          <img src="{{ resize_image(path="profile-square.jpg", width=50, height=50, op="fill") }}" alt="profile picture">
+        </a>
+        <nav>
+          <a href="/projects/">Projects</a>
+          <a href="/about/">About</a>
+          <a href="/blog/">Blog</a>
+        </nav>
+      </header>
+    {% endblock header %}
+    <main>
+    {% block content %} {% endblock content %}
+    </main>
+  </body>
+</html>
