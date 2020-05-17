@@ -10,6 +10,10 @@ body {
   min-height: 100vh;
 }
 
+.content {
+  max-width: 100%;
+}
+
 h1,
 h2,
 h3,
@@ -24,11 +28,19 @@ body {
   strong {
     font-weight: 500;
   }
-}
 
-pre {
-  overflow: auto;
-  padding: 1rem;
+  blockquote {
+    border-left: 6px solid var(--accent-color-light);
+    padding-left: 1rem;
+    font-style: italic;
+    opacity: 0.9;
+  }
+
+  pre {
+    overflow: auto;
+    padding: 1rem;
+    max-width: 100%;
+  }
 }
 
 code {

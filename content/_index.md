@@ -2,13 +2,12 @@
 title = "Bennett's Rust Journal"
 +++
 
-## Hello, Bennett here.
+## Hello, this is a simple dev blog.
 
-I’m a Software Developer living in Brisbane, working on making cool things
-in the browser at [Clipchamp.](https://clipchamp.com)
+This is a simple dev blog that I made [for my website](https://bennetthardwick.com).
+It's quite easy to install, just go to the [project page](https://github.com/bennetthardwick/simple-dev-blog-zola-starter) and follow the prompts.
 
-I’m still a full-time student, but you’ll barely find me at QUT. Rather,
-you’ll probably find me breaking builds, ricing Archlinux or coming up
-with ideas for apps I’m never gonna finish.
+This template does some fancy stuff like [pre-rendering](https://developer.mozilla.org/en-US/docs/Web/HTML/Preloading_content) blog posts and nav links,
+pre-fetching your profile image and adding a bunch of common meta tags.
 
-If you'd like to get in contact, you can send me an email at: `me at bennetthardwick.com`
+If you're still making up your mind, feel fee to take a look around by clicking the [about](/about/) and [blog](/blog/) nav links.

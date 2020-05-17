@@ -12,8 +12,8 @@ highlight_theme = "demain"
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = false
 
-title = "Bennett's Rust Journal"
-description = "The personal website and thoughts of me Bennett Hardwick - Software Developer living in Brisbane and working at Clipchamp."
+title = "Simple Dev Blog"
+description = "A simple dev blog where you can blog about being a dev. How cool is that?"
 
 taxonomies = [
   { name = "tags" }
@@ -22,7 +22,6 @@ taxonomies = [
 [extra]
 
 nav = [
-  { name = "Projects", path = "/projects/" },
   { name = "About", path = "/about/" },
   { name = "Blog", path = "/blog/" }
 ]
@@ -31,15 +30,13 @@ icon = "icon.png"
 profile_small = "icon.png"
 profile_large = "profile.jpg"
 
-accent = "#2f76d0"
-accent_light = "#82ade3"
+accent = "#05a081"
+accent_light = "#82d0c0"
 
 twitter = "bennettbackward"
 
 footer_about = """
-Bennett is a Software Engineer working at [Clipchamp](https://clipchamp.com).
-He spends most of his day playing with React and Gatsby, and editing videos.
-He's not a fan of social media, but you can follow him on [Github](https://github.com/bennetthardwick)
+A simple dev-blog theme created by Bennett. You can follow him on [Github](https://github.com/bennetthardwick) (if you like).
 """
 
 not_found_message = """
