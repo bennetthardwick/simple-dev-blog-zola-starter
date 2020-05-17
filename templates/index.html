@@ -5,21 +5,21 @@
 {% endblock styles %}
 
 {% block posthead %}
-  <link rel="prefetch" href="{{ resize_image(path="profile.jpg", width=280, height=373, op="fill") }}">
+  <link rel="prefetch" href="{{ resize_image(path=config.extra.profile_large, width=280, height=373, op="fill") }}">
 {% endblock posthead %}
 
 {% block content %}
   <div class="profile">
     <div class="profile-container">
-      <img src="{{ resize_image(path="profile.jpg", width=280, height=373, op="fill") }}" alt="profile picture">
+      <img src="{{ resize_image(path=config.extra.profile_large, width=280, height=373, op="fill") }}" alt="profile picture">
     </div>
   </div>
   <div class="content">
     {{ section.content | safe }}
     <nav class="lower">
-      <a href="/projects/">Projects</a>
-      <a href="/about/">About</a>
-      <a href="/blog/">Blog</a>
+      {% for link in config.extra.nav %}
+        <a href="{{ link.path }}">{{ link.name }}</a>
+      {% endfor %}
     </nav>
   </div>
 {% endblock content %}

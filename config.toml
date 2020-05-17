@@ -1,5 +1,5 @@
 # The URL the site will be built for
-base_url = "https://example.com"
+base_url = "https://bennetthardwick.com"
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
@@ -15,5 +15,33 @@ build_search_index = false
 title = "Bennett's Rust Journal"
 description = "The personal website and thoughts of me Bennett Hardwick - Software Developer living in Brisbane and working at Clipchamp."
 
+taxonomies = [
+  { name = "tags" }
+]
+
 [extra]
-# Put all your custom variables here
+
+nav = [
+  { name = "Projects", path = "/projects/" },
+  { name = "About", path = "/about/" },
+  { name = "Blog", path = "/blog/" }
+]
+
+icon = "icon.png"
+profile_small = "icon.png"
+profile_large = "profile.jpg"
+
+accent = "#2f76d0"
+accent_light = "#82ade3"
+
+twitter = "bennettbackward"
+
+footer_about = """
+Bennett is a Software Engineer working at [Clipchamp](https://clipchamp.com).
+He spends most of his day playing with React and Gatsby, and editing videos.
+He's not a fan of social media, but you can follow him on [Github](https://github.com/bennetthardwick)
+"""
+
+not_found_message = """
+This is not the page you're looking for... return back to [safety?](/)
+"""

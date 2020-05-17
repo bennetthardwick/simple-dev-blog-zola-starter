@@ -28,6 +28,7 @@ body {
 
 pre {
   overflow: auto;
+  padding: 1rem;
 }
 
 code {
@@ -37,9 +38,9 @@ code {
 
 a,
 a:visited {
-  color: #2f76d0;
+  color: var(--accent-color);
   text-decoration: none;
-  border-bottom: 1px solid #82ade3;
+  border-bottom: 1px solid var(--accent-color-light);
 }
 
 main {
@@ -79,6 +80,7 @@ nav {
 
 hr {
   border: solid 1px rgba(0, 0, 0, 0.1);
+  margin: 2rem 0;
 }
 
 @media (max-width: 600px) {
