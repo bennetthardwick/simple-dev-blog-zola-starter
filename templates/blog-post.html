@@ -1,5 +1,19 @@
 {% extends "base.html" %}
 
+{% block posthead %}
+  {% if page.earlier %}
+    <link rel="prerender" href="{{ page.earlier.permalink }}">
+  {% endif %}
+
+  {% if page.later %}
+    <link rel="prerender" href="{{ page.later.permalink }}">
+  {% endif %}
+
+  {% for tag in page.taxonomies.tags %}
+    <link rel="prerender"  href="{{ get_taxonomy_url(kind="tags", name=tag) }}">
+  {% endfor %}
+{% endblock %}
+
 {% block content %}
   <div class="post-title">
     <h1>{{ page.title }}</h1>
