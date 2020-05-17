@@ -90,5 +90,10 @@
     <main>
     {% block content %} {% endblock content %}
     </main>
+
+    {% if config.extra.gtag %}
+      <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
+      <script async="" src="https://www.googletagmanager.com/gtag/js?id={{ config.extra.gtag }}"></script>
+    {% endif %}
   </body>
 </html>
