@@ -26,8 +26,17 @@
     <link rel="apple-touch-icon" sizes="384x384" href="{{ resize_image(path=config.extra.profile_small, width=384, height=384, op="fill") }}" />
     <link rel="apple-touch-icon" sizes="512x512" href="{{ resize_image(path=config.extra.profile_small, width=512, height=512, op="fill") }}" />
 
+    {% if config.extra.gtag %}
+      <script async src="https://www.googletagmanager.com/gtag/js?id={{ config.extra.gtag"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '{{ config.extra.gtag }}');
+      </script>
+    {% endif %}
+
     <meta property="og:type" content="website">
-    <meta property="og:image" content="website">
 
     <meta name="twitter:card" content="summary">
 
@@ -90,10 +99,5 @@
     <main>
     {% block content %} {% endblock content %}
     </main>
-
-    {% if config.extra.gtag %}
-      <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
-      <script async="" src="https://www.googletagmanager.com/gtag/js?id={{ config.extra.gtag }}"></script>
-    {% endif %}
   </body>
 </html>
