@@ -1,7 +1,8 @@
-name = "simple dev blog"
-description = "A simple dev blog theme"
+name = "simple-dev-blog"
+description = "A simple dev blog theme with no javascript, prerendered linked pages and SEO tags."
 license = "MIT"
 homepage = "https://github.com/bennetthardwick/simple-dev-blog-zola-starter"
+demo = "https://simple-dev-blog-zola-starter.netlify.app/"
 min_version = "0.4.0"
 
 [extra]
@@ -18,8 +19,6 @@ profile_large = "profile.jpg"
 accent = "#05a081"
 accent_light = "#82d0c0"
 
-twitter = "bennettbackward"
-
 footer_about = """
 A simple dev-blog theme created by Bennett. You can follow him on [Github](https://github.com/bennetthardwick) (if you like).
 """
@@ -30,4 +29,4 @@ This is not the page you're looking for... return back to [safety?](/)
 
 [author]
 name = "Bennett Hardwick"
-homepage = "https://bennetthardwick.com"
+homepage = "https://bennetthardwick.com/"

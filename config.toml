@@ -13,7 +13,7 @@ highlight_theme = "demain"
 build_search_index = false
 
 title = "Simple Dev Blog"
-description = "A simple dev blog where you can blog about being a dev. How cool is that?"
+description = "A simple dev blog theme with no javascript, prerendered linked pages and SEO tags."
 
 taxonomies = [
   { name = "tags" }
@@ -32,8 +32,6 @@ profile_large = "profile.jpg"
 
 accent = "#05a081"
 accent_light = "#82d0c0"
-
-twitter = "bennettbackward"
 
 author = "John Doe"
 

@@ -25,7 +25,7 @@ You can find installation instructions [on the Zola website](https://www.getzola
 2. After you've created the site, install the "Simple Dev Blog" theme like so:
 
    ```sh
-   git clone \
+   git clone --depth=1 \
      https://github.com/bennetthardwick/simple-dev-blog-zola-starter \
      themes/simple-dev-blog
    ```
