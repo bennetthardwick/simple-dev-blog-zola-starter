@@ -4,40 +4,43 @@ template = "page.html"
 
 ## Hello, this is a simple dev blog.
 
-I said a lot about this template on the index page ([here](/) it is if you haven't seen it), so I'll just fill the rest up with lorem ipsum.
+This is a simple dev blog that I made [for my website](https://bennetthardwick.com).
+It's quite easy to install, just go to the [project page](https://github.com/bennetthardwick/simple-dev-blog-zola-starter) and follow the prompts.
 
-### Nec inpulerat quies omnipotens praecordia genitor quoque
+This template does some fancy stuff like [pre-rendering](https://developer.mozilla.org/en-US/docs/Web/HTML/Preloading_content) blog posts and nav links,
+pre-fetching your profile image and adding a bunch of common meta tags.
 
-Lorem markdownum optat; sic siquid exitium referuntur [vulnere
-regis](http://www.plangore.net/). **Qui** et dedisse, ver nobis in invitam
-primusque, iam.
+### How to get started
 
-### Reperta iam est ictu quotiens
+To create a new Zola site, first download the CLI and install it on your system.
+You can find installation instructions [on the Zola website](https://www.getzola.org/documentation/getting-started/installation/).
 
-Iunxit fecit passaque *fine*: manu ora nusquam et paene adest, ornum Martem,
-Aegyptia [ambo](http://canamus.org/) plura torvis. Adnuit volenti hanc. Iudice
-[tota](http://auxiliumque.org/in.html) sonum! Terram toro, saxa hos aerane
-proelia, nec sedilia, regione **avus ire** Phoebus, terga. Membra *brumalis
-siquidem* inde iuvenis septem, ira rexerat, gemitus fortibus *nigrae hoc*.
+1. After you've installed the Zola CLI, run the following command to create a new site:
 
-Ferendo Philomela actutum. Achaica Iove: Cupido: usque languore licebit; manus
-ea fuit agitante fateamur velox!
+   ```sh
+   zola init my_amazing_site
+   cd my_amazing_site
+   ```
 
-### Quo consolenturne navem numina
+2. After you've created the site, install the "Simple Dev Blog" theme like so:
 
-Mimasque adulter creatus pendebant nefandas tellus everterit Troiam et et,
-marito *pars relapsa* habendum flectebat inpedit materna. Themi simplex sed et
-effugiam premit, facta dixit caput Tenedonque ipse faciat! Ferebam cornu est
-fervens, quam esse formam ferro magno quam qua, concutit, mihi.
+   ```sh
+   git clone \
+     https://github.com/bennetthardwick/simple-dev-blog-zola-starter \
+     themes/simple-dev-blog
+   ```
 
-> Infert crescunt, Peneiaque pro Region terrae; per in cum nidus quaerenti
-> vetuere manu: galeamque velles! Alimenta arboris estote et ope inpia, madentes
-> **ut** corpus, haud; saxa festum nec: ut! Arma causa excidit, ego certa
-> **ambiguis** exclamant tuorum maxima **spissi diva**. Ipse nocuit cervix nam
-> pingue ensem temptabat Alcmenae imagine iam, in.
+3. Now in your `config.toml` file, choose the theme by setting `theme = "simple-dev-blog"`.
 
-### Temptamenta Troia patentibus exilium pendere est manet
+4. That's it! Now build your site by running the following command, and navigate to `127.0.0.1:111`:
 
-Relictae ramo equos, raucis numina; ab oscula eram genitor tangit. E lunae
-altera nectar urbem, natisque ante et **recens** Procris sorores vertigine
-phocus. Ventus promissaque loci parcere ambitiosus aera!
+   ```sh
+   zola serve
+   ```
+
+You should now have a speedy simple dev blog up and running, have fun!
+
+### Deployment
+
+[Netlify](https://www.netlify.com/) is a great way to deploy your website for free to a custom domain and it's what I use [personally](https://bennetthardwick.com).
+To deploy to Netlify, refer to Zola's [Netlify deployment instructions](https://www.getzola.org/documentation/deployment/netlify/).
