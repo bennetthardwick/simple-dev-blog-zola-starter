@@ -15,6 +15,8 @@ build_search_index = false
 title = "Simple Dev Blog"
 description = "A simple dev blog theme with no javascript, prerendered linked pages and SEO tags."
 
+generate_feed = true
+
 taxonomies = [
   { name = "tags" }
 ]
