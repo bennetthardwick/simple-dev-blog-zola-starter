@@ -10,11 +10,9 @@
   {% if config.extra.latest_text %}
     {% set blogs = get_section(path="blog/_index.md") %}
     {% set latest = blogs.pages.0 %}
-    <div class="latest-container">
-      {% if latest %}
-        <link rel="prerender" href="{{ latest.permalink }}" />
-      {% endif %}
-    </div>
+    {% if latest %}
+      <link rel="prerender" href="{{ latest.permalink }}" />
+    {% endif %}
   {% endif %}
 {% endblock posthead %}
 
