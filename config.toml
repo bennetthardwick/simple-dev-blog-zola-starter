@@ -28,6 +28,8 @@ nav = [
   { name = "Blog", path = "/blog/" }
 ]
 
+latest_text = "Check out my latest post:"
+
 icon = "icon.png"
 profile_small = "icon.png"
 profile_large = "profile.jpg"

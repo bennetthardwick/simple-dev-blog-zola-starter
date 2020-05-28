@@ -61,9 +61,9 @@
       <meta name="twitter:title" content="{{ config.title }}">
     {% endif %}
 
-    <link rel="prerender" href="/projects/" />
-    <link rel="prerender" href="/about/" />
-    <link rel="prerender" href="/blog/" />
+    {% for link in config.extra.nav %}
+      <link rel="prerender" href="{{ link.path }}" />
+    {% endfor %}
 
     <link rel="prefetch" href="{{ resize_image(path=config.extra.profile_small, width=50, height=50, op="fill") }}" />
 

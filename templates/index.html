@@ -6,7 +6,18 @@
 
 {% block posthead %}
   <link rel="prefetch" href="{{ resize_image(path=config.extra.profile_large, width=280, height=373, op="fill") }}">
+
+  {% if config.extra.latest_text %}
+    {% set blogs = get_section(path="blog/_index.md") %}
+    {% set latest = blogs.pages.0 %}
+    <div class="latest-container">
+      {% if latest %}
+        <link rel="prerender" href="{{ latest.permalink }}" />
+      {% endif %}
+    </div>
+  {% endif %}
 {% endblock posthead %}
+
 
 {% block content %}
   <div class="profile">
@@ -16,6 +27,17 @@
   </div>
   <div class="content">
     {{ section.content | safe }}
+
+    {% if config.extra.latest_text %}
+      {% set blogs = get_section(path="blog/_index.md") %}
+      {% set latest = blogs.pages.0 %}
+      <div class="latest-container">
+        {% if latest %}
+        {{ config.extra.latest_text }} "<a href="{{ latest.permalink }}">{{ latest.title }}</a>"
+        {% endif %}
+      </div>
+    {% endif %}
+
     <nav class="lower">
       {% for link in config.extra.nav %}
         <a href="{{ link.path }}">{{ link.name }}</a>
