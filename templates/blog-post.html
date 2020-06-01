@@ -24,16 +24,14 @@
       "headline": "{{ page.title }}",
       "image": [],
       "datePublished": "{{ page.date | date(format="%+") }}",
-      "dateModified": "{{ page.date | date(format="%+") }}",
-      {% if config.extra.author %}
+      "dateModified": "{{ page.date | date(format="%+") }}"{% if config.extra.author %},
       "author": {
         "@type": "Person",
         "name": "{{ config.extra.author }}"
       },
        "publisher": {
         "@type": "Organization",
-        "name": "{{ config.extra.author }}",
-        {% if config.extra.icon %}
+        "name": "{{ config.extra.author }}"{% if config.extra.icon %},
         "logo": {
           "@type": "ImageObject",
           "url": "{{ get_url(path=config.extra.icon) }}"
