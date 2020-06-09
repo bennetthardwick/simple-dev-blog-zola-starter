@@ -45,6 +45,12 @@
       <meta name="twitter:site" content="@{{ config.twitter }}">
     {% endif %}
 
+    {% if page.extra.thumbnail %}
+    <meta property="og:image" content="{{ get_url(path=page.path ~ page.extra.thumbnail) }}">
+    {% elif config.extra.default_og_image %}
+    <meta property="og:image" content="{{ get_url(path=config.extra.default_og_image) }}">
+    {% endif %}
+
     {% block description %}
       {% if page.description %}
         <meta name="description" content="{{ page.description }}" />
