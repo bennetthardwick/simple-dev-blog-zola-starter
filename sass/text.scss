@@ -46,6 +46,10 @@ body {
 code {
   background: hsla(0, 0%, 0%, 0.04);
   padding: 0.2em 0;
+
+  pre > & {
+    background: none;
+  }
 }
 
 a,
