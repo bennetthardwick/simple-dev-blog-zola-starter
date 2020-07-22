@@ -2,5 +2,7 @@
 
 {% block content %}
 <h1>404</h1>
-This is not the page you're looking for... return back to <a href="/">safety?</a>
+{% if config.extra.not_found_message %}
+  {{ config.extra.not_found_message | markdown | safe }}
+{% endif %}
 {% endblock content %}
