@@ -29,6 +29,9 @@ not_found_message = """
 This is not the page you're looking for... return back to [safety?](/)
 """
 
+# If you prefer your posts to be in /articles/, set this to "articles".
+blog_container = "blog"
+
 [author]
 name = "Bennett Hardwick"
 homepage = "https://bennetthardwick.com/"
