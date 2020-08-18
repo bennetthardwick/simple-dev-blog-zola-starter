@@ -48,6 +48,7 @@ The following options should be under the `[extra]` in `config.toml`
 
 - `accent_light` - a lighter shade of your site's accent color
 - `accent` - your site's accent color
+- `blog_path` - the path to your blog (defaults to `blog`)
 - `default_og_image` - the path default og:image for your page
 - `footer_about` - the content for your footer in markdown
 - `icon` - the path to the icon for your site

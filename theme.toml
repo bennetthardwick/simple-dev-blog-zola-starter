@@ -14,7 +14,7 @@ nav = [
   { name = "Blog", path = "/blog/" }
 ]
 
-blog_name = "blog"
+blog_path = "blog"
 
 icon = "icon.png"
 profile_small = "icon.png"
