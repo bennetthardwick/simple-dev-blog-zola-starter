@@ -16,15 +16,18 @@
     </style>
 
     <meta name="theme-color" content="{{ config.extra.accent }}" />
-    <link rel="icon" href="{{ resize_image(path=config.extra.profile_small, width=48, height=48, op="fill") }}" />
-    <link rel="apple-touch-icon" sizes="48x48" href="{{ resize_image(path=config.extra.profile_small, width=48, height=48, op="fill") }}" />
-    <link rel="apple-touch-icon" sizes="72x72" href="{{ resize_image(path=config.extra.profile_small, width=72, height=72, op="fill") }}" />
-    <link rel="apple-touch-icon" sizes="96x96" href="{{ resize_image(path=config.extra.profile_small, width=96, height=96, op="fill") }}" />
-    <link rel="apple-touch-icon" sizes="144x144" href="{{ resize_image(path=config.extra.profile_small, width=144, height=144, op="fill") }}" />
-    <link rel="apple-touch-icon" sizes="192x192" href="{{ resize_image(path=config.extra.profile_small, width=192, height=192, op="fill") }}" />
-    <link rel="apple-touch-icon" sizes="256x256" href="{{ resize_image(path=config.extra.profile_small, width=256, height=256, op="fill") }}" />
-    <link rel="apple-touch-icon" sizes="384x384" href="{{ resize_image(path=config.extra.profile_small, width=384, height=384, op="fill") }}" />
-    <link rel="apple-touch-icon" sizes="512x512" href="{{ resize_image(path=config.extra.profile_small, width=512, height=512, op="fill") }}" />
+
+    {% if config.extra.profile_small %}
+      <link rel="icon" href="{{ resize_image(path=config.extra.profile_small, width=48, height=48, op="fill") }}" />
+      <link rel="apple-touch-icon" sizes="48x48" href="{{ resize_image(path=config.extra.profile_small, width=48, height=48, op="fill") }}" />
+      <link rel="apple-touch-icon" sizes="72x72" href="{{ resize_image(path=config.extra.profile_small, width=72, height=72, op="fill") }}" />
+      <link rel="apple-touch-icon" sizes="96x96" href="{{ resize_image(path=config.extra.profile_small, width=96, height=96, op="fill") }}" />
+      <link rel="apple-touch-icon" sizes="144x144" href="{{ resize_image(path=config.extra.profile_small, width=144, height=144, op="fill") }}" />
+      <link rel="apple-touch-icon" sizes="192x192" href="{{ resize_image(path=config.extra.profile_small, width=192, height=192, op="fill") }}" />
+      <link rel="apple-touch-icon" sizes="256x256" href="{{ resize_image(path=config.extra.profile_small, width=256, height=256, op="fill") }}" />
+      <link rel="apple-touch-icon" sizes="384x384" href="{{ resize_image(path=config.extra.profile_small, width=384, height=384, op="fill") }}" />
+      <link rel="apple-touch-icon" sizes="512x512" href="{{ resize_image(path=config.extra.profile_small, width=512, height=512, op="fill") }}" />
+    {% endif %}
 
     {% if config.extra.gtag %}
       <script async src="https://www.googletagmanager.com/gtag/js?id={{ config.extra.gtag }}"></script>

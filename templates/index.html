@@ -8,7 +8,11 @@
   <link rel="prefetch" href="{{ resize_image(path=config.extra.profile_large, width=280, height=373, op="fill") }}">
 
   {% if config.extra.latest_text %}
-    {% set blogs = get_section(path="blog/_index.md") %}
+    {% set blog_name = "blog" %}
+    {% if config.extra.blog_name %}
+      {% set_global blog_name = config.extra.blog_name %}
+    {% endif %}
+    {% set blogs = get_section(path=blog_name ~ "/_index.md") %}
     {% set latest = blogs.pages.0 %}
     {% if latest %}
       <link rel="prerender" href="{{ latest.permalink }}" />
@@ -27,7 +31,11 @@
     {{ section.content | safe }}
 
     {% if config.extra.latest_text %}
-      {% set blogs = get_section(path="blog/_index.md") %}
+      {% set blog_name = "blog" %}
+      {% if config.extra.blog_name %}
+        {% set_global blog_name = config.extra.blog_name %}
+      {% endif %}
+      {% set blogs = get_section(path=blog_name ~ "/_index.md") %}
       {% set latest = blogs.pages.0 %}
       <div class="latest-container">
         {% if latest %}
