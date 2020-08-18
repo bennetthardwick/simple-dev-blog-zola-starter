@@ -28,7 +28,7 @@ You can find installation instructions [on the Zola website](https://www.getzola
 
 3. Now in your `config.toml` file, choose the theme by setting `theme = "simple-dev-blog"`.
 
-4. See and configure the configuration options below in your `config.toml`
+4. See and configure the options below in your `config.toml`
 
 5. That's it! Now build your site by running the following command, and navigate to `127.0.0.1:111`:
 
@@ -51,11 +51,12 @@ The following options should be under the `[extra]` in `config.toml`
 - `blog_path` - the path to your blog (defaults to `blog`)
 - `default_og_image` - the path default og:image for your page
 - `footer_about` - the content for your footer in markdown
-- `icon` - the path to the icon for your site
+- `icon` - the path to the icon for your site in the content folder
+  - E.g to add the file `icon.png` you should put it in `content/icon.png`
 - `nav` - see `theme.toml`, the navigation links for your site
 - `not_found_message` - the content for your 404 page in markdown
-- `profile_large` - a larger vertical version of your profile picture
-- `profile_small` - a small version of your profile picture
+- `profile_large` - the path to a larger vertical version of your profile picture in the content folder
+- `profile_small` - the path to a small version of your profile picture in the content folder
 
 ### Page
 
