@@ -50,6 +50,8 @@
 
     {% if page.extra.thumbnail %}
     <meta property="og:image" content="{{ get_url(path=page.path ~ page.extra.thumbnail) }}">
+    {% elif page.extra.static_thumbnail %}
+    <meta property="og:image" content="{{ get_url(path=page.extra.static_thumbnail) }}">
     {% elif config.extra.default_og_image %}
     <meta property="og:image" content="{{ get_url(path=config.extra.default_og_image) }}">
     {% endif %}
