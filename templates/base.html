@@ -51,7 +51,7 @@
     {% if page.extra.thumbnail %}
       <meta property="og:image" content="{{ get_url(path=page.path ~ page.extra.thumbnail) }}">
     {% elif page.extra.static_thumbnail %}
-      {%if page.extra.static_thumbnail is containing("http") %}
+      {%if page.extra.static_thumbnail is matching("^http[s]?://") %}
         <meta property="og:image" content="{{ page.extra.static_thumbnail }}">
       {% else %}
         <meta property="og:image" content="{{ get_url(path=page.extra.static_thumbnail) }}">
