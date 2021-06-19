@@ -114,5 +114,12 @@
     <main>
     {% block content %} {% endblock content %}
     </main>
+    <footer class="footer-page">
+    {% block footer %}
+      {% if config.extra.footer_page %}
+        {{ config.extra.footer_page | markdown | safe }}
+      {% endif %}
+    {% endblock footer %}
+    </footer>
   </body>
 </html>

@@ -43,6 +43,10 @@ footer_about = """
 A simple dev-blog theme created by Bennett. You can follow him on [Github](https://github.com/bennetthardwick) (if you like).
 """
 
+footer_page = """
+© 2021, all rights reserved
+"""
+
 not_found_message = """
 This is not the page you're looking for... return back to [safety?](/)
 """
