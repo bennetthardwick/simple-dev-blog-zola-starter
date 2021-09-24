@@ -99,6 +99,8 @@ main {
 }
 
 body {
+  background-color: var(--body-bg);
+  color: var(--body-color);
   box-sizing: border-box;
   display: flex;
   align-items: center;
