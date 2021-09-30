@@ -12,7 +12,32 @@
       :root {
         --accent-color: {{ config.extra.accent }};
         --accent-color-light: {{ config.extra.accent_light }};
+        --accent-overlay-color: #fff;
+        --body-bg: #fff;
+        --body-color: #000;
+        --heading-color: #000;
+        --table-bg-even: #f3f3f3;
+        --table-border-bottom: #dddddd;
       }
+      {% if config.extra.dark_mode %}
+        @media (prefers-color-scheme: dark) {
+          :root {
+            --accent-overlay-color: #dee2e6;
+            --body-bg: #212529;
+            --body-color: #abb2bf;
+            --heading-color: #dee2e6;
+            --table-bg-even: #2d3237;
+            --table-border-bottom: #697077;
+          }
+          img {
+            opacity: .75;
+            transition: opacity .5s ease-in-out;
+          }
+          img:hover {
+            opacity: 1;
+          }
+        }
+      {% endif %}
     </style>
 
     <meta name="theme-color" content="{{ config.extra.accent }}" />
