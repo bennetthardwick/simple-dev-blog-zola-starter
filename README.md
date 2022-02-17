@@ -8,7 +8,7 @@ You can view it live [here](https://simple-dev-blog-zola-starter.netlify.app/).
 
 ## How to get started
 
-To create a new Zola site, first download the CLI and install it on your system. This theme requires Zola version 14 or greater.
+To create a new Zola site, first download the CLI and install it on your system. This theme requires Zola version 0.14 or greater.
 
 
 You can find installation instructions [on the Zola website](https://www.getzola.org/documentation/getting-started/installation/).
