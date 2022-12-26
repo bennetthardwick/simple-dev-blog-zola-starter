@@ -12,6 +12,6 @@
   {{ section.content | safe }}
 
   {% for post in section.pages %}
-    {{ post_macros::post_preview(post=post) }}
+    {{ post_macros::post_preview(post=post, summary_truncate_length=config.extra.summary_truncate_length) }}
   {% endfor %}
 {% endblock content %}

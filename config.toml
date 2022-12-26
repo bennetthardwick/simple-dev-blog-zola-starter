@@ -25,6 +25,8 @@ taxonomies = [
 
 dark_mode = false
 
+summary_truncate_length = 300
+
 nav = [
   { name = "About", path = "/about/" },
   { name = "Blog", path = "/blog/" }

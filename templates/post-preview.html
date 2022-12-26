@@ -1,4 +1,4 @@
-{% macro post_preview(post) %}
+{% macro post_preview(post, summary_truncate_length=300) %}
   <div class="post-preview">
     <h3 class="post-title"><a href="{{ post.permalink }}">{{ post.title }}</a></h3>
     <small>
@@ -8,7 +8,7 @@
       {% if post.summary -%}
         {{ post.summary }}
       {% else %}
-        {{ post.content | safe | striptags | truncate(length=300) }}
+        {{ post.content | truncate(length=summary_truncate_length) | safe }}
       {%- endif %}
       <a href="{{ post.permalink }}">read more</a>
     </div>

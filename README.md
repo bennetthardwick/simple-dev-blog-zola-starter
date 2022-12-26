@@ -61,6 +61,7 @@ The following options should be under the `[extra]` in `config.toml`
 - `not_found_message` - the content for your 404 page in markdown
 - `profile_large` - the path to a larger vertical version of your profile picture in the content folder
 - `profile_small` - the path to a small version of your profile picture in the content folder
+- `summary_truncate_length` - the length of a post's summary
 
 ### Page
 
