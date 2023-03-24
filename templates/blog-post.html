@@ -75,7 +75,7 @@
     <small>
       {{ page.date | date(format="%B %d, %Y") }}
       {% if page.taxonomies.authors %}
-        &mdash; By 
+        &nbsp;&centerdot;&nbsp; By 
         <span class="tags">
           {% for author in page.taxonomies.authors %}
             <a href="{{ get_taxonomy_url(kind="authors", name=author) }}">{{ author }}</a>{% if not loop.last %}, {% endif %}
@@ -83,7 +83,7 @@
         </span>
       {% endif %}
       {% if page.taxonomies.tags %}
-        &mdash; Filed under 
+        &nbsp;&centerdot;&nbsp; Filed under 
         <span class="tags">
           {% for tag in page.taxonomies.tags %}
             <a href="{{ get_taxonomy_url(kind="tags", name=tag) }}">{{ tag }}</a>{% if not loop.last %}, {% endif %}
