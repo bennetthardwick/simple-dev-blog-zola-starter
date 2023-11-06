@@ -4,7 +4,7 @@ template = "page.html"
 
 ## Hello, this is a simple dev blog.
 
-This is a simple dev blog that I made [for my website](https://bennetthardwick.com).
+This is a simple dev blog that I made [for my website](https://bennett.dev).
 It's quite easy to install, just go to the [project page](https://github.com/bennetthardwick/simple-dev-blog-zola-starter) and follow the prompts.
 
 This template does some fancy stuff like [pre-rendering](https://developer.mozilla.org/en-US/docs/Web/HTML/Preloading_content) blog posts and nav links,
@@ -42,5 +42,5 @@ You should now have a speedy simple dev blog up and running, have fun!
 
 ### Deployment
 
-[Netlify](https://www.netlify.com/) is a great way to deploy your website for free to a custom domain and it's what I use [personally](https://bennetthardwick.com).
+[Netlify](https://www.netlify.com/) is a great way to deploy your website for free to a custom domain and it's what I used to use [personally](https://bennett.dev).
 To deploy to Netlify, refer to Zola's [Netlify deployment instructions](https://www.getzola.org/documentation/deployment/netlify/).
