@@ -9,10 +9,10 @@
 {% endblock posthead %}
 
 {% block content %}
-  <h1>{{ term.pages | length }} pages tagged with "{{ term.name }}"</h1>
+  <h1>{{ term.pages | length }} page{{ term.pages | length | pluralize }} tagged with "{{ term.name }}"</h1>
   <div class="taxonomy-container">
     {% for post in term.pages %}
-      {{ post_macros::post_preview(post=post) }}
+      {{ post_macros::post_preview(post=post, summary_truncate_length=config.extra.summary_truncate_length) }}
     {% endfor %}
   </div>
 {% endblock content %}

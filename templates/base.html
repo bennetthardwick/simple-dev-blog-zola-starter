@@ -108,7 +108,7 @@
     <title>
       {% block title %}
         {% if page.title %}
-          {{ page.title }}
+          {{ page.title | striptags }} :: {{ config.title }}
         {% else %}
           {{ config.title }}
         {% endif %}
@@ -127,6 +127,7 @@
         <a class="profile-icon" href="/">
           <img src="{{ icon.url }}" alt="profile picture">
         </a>
+        <span class="profile-text">{{ config.title }}</span>
         <nav>
           {% for link in config.extra.nav %}
             <a href="{{ link.path }}">{{ link.name }}</a>

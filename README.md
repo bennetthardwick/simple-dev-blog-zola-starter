@@ -32,9 +32,11 @@ You can find installation instructions [on the Zola website](https://www.getzola
 
 4. This theme uses the `tags` taxonomy, in your `config.toml` file set `taxonomies = [ { name = "tags" } ]`
 
-5. Copy across the default content from the theme by running `cp themes/simple-dev-blog/content/* ./content -r`
+5. This theme uses the `authors` taxonomy, in your `config.toml` file set `taxonomies = [ { name = "authors" } ]`
 
-6. That's it! Now build your site by running the following command, and navigate to `127.0.0.1:111`:
+6. Copy across the default content from the theme by running `cp themes/simple-dev-blog/content/* ./content -r`
+
+7. That's it! Now build your site by running the following command, and navigate to `127.0.0.1:111`:
 
    ```sh
    zola serve
@@ -61,6 +63,7 @@ The following options should be under the `[extra]` in `config.toml`
 - `not_found_message` - the content for your 404 page in markdown
 - `profile_large` - the path to a larger vertical version of your profile picture in the content folder
 - `profile_small` - the path to a small version of your profile picture in the content folder
+- `summary_truncate_length` - the length of a post's summary
 
 ### Page
 
